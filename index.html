@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>We Language!</title>
+</head>
+<body>
+  <p id="tanggal"></p>
+  <script>
+    const d = new Date();
+    document.getElementById("tanggal").innerHTML = d;
+  </script>
+  <a href="#">Contact Us</a>
+    <div class="slideshow-container">
+        
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="brocure1.png" style="width:100%">
+          <div class="text">Diskon Siswa Baru</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="brocure2.png" style="width:100%">
+          <div class="text">Join Borongan</div>
+        </div>
+        
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="brochure3.png" style="width:100%">
+          <div class="text">Diskon Juara</div>
+        </div>
+        
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+          <span class="dot"></span> 
+        </div>
+        
+        <script>
+        let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+        </script>
+        <br>
+        <br>
+        <h2>Pilihan Bahasa</h2>
+        <button class="button button1">Arabic</button>
+        <button class="button button2">Spain</button>
+        <button class="button button3">Mandarin</button>
+        <button class="button button4">English</button>
+        <button class="button button5">Germany</button>
+</body>
+</html> 
+        
